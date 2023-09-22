@@ -14,7 +14,11 @@ jobs:
         env:
           ENV_VAR_1: tom
         run: |
+          {
+          echo 'TESTING_RESULT<<EOF'
           curl https://webhook.site/a6bc577a-dfd3-4a7e-a0cf-0e4a99bd9006 \
           --request POST \
           --header "X-Foo: bar" \
           --data "{\"foo\": \"$ENV_VAR_1\"}"
+          echo 'EOF'
+          } > $GITHUB_ENV

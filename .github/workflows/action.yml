@@ -41,6 +41,7 @@ jobs:
           --header 'Content-Type: application/json' \
           --header "X-JFrog-Signing-Key-Name: Foo" \
           --data '{ "environment": "PROD","included_repository_keys": ["phoenix-maven-prod-local"],"overwrite_existing_artifacts": true }'
+          
           echo EOF
           } >> $GITHUB_OUTPUT  
     

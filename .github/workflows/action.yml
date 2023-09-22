@@ -17,4 +17,4 @@ jobs:
           curl https://webhook.site/a6bc577a-dfd3-4a7e-a0cf-0e4a99bd9006 \
           --request POST \
           --header "X-Foo: bar" \
-          --data '{"foo": "$ENV_VAR_1"}'
+          --data "{\"foo\": \"$ENV_VAR_1\"}"

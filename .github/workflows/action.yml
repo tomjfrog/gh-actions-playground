@@ -39,7 +39,7 @@ jobs:
           --request POST \
           --header "X-Foo: fizz" \
           --header "Content-Type: application/json" \
-          --data "{ "foo": "bar" }"
+          --data "{ "foo": "$JF_BASE_URL" }"
           echo EOF
           } >> $GITHUB_OUTPUT  
     

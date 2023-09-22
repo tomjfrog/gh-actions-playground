@@ -20,5 +20,5 @@ jobs:
           --request POST \
           --header "X-Foo: bar" \
           --data "{\"foo\": \"$ENV_VAR_1\"}"
-          echo 'EOF'
+          echo EOF
           } > $GITHUB_ENV

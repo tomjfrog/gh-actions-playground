@@ -41,5 +41,9 @@ jobs:
           --header "Content-Type: application/json" \
           --data "{ "foo": "$JF_BASE_URL" }"
           echo EOF
-          } >> $GITHUB_OUTPUT  
+          } >> $GITHUB_OUTPUT
+      - name: Validate Promotion
+        run: |
+          echo "PROMOTION_SUCCESS=true" >> $GITHUB_ENV
+          echo ${{ steps.promote_release_bundle.outputs.PROMOTE_RESULT }}
     

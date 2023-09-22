@@ -22,4 +22,4 @@ jobs:
           --header "X-Foo: bar" \
           --data "{\"foo\": \"$ENV_VAR_1\"}"
           echo EOF
-          } > $GITHUB_ENV
+          } >> $GITHUB_ENV
